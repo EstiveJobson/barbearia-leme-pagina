@@ -13,7 +13,7 @@ The full site is the other live demo and the reference for the brand (name, serv
 
 ## Edit the shop
 
-All shop data lives in [`config.js`](config.js). The page reads that file in the browser.
+All shop data is written in [`index.html`](index.html), so the page works without JavaScript. [`config.js`](config.js) is the reference copy of the same values — keep the two in sync when you edit the shop.
 
 | Field | What it changes |
 | --- | --- |
@@ -21,7 +21,7 @@ All shop data lives in [`config.js`](config.js). The page reads that file in the
 | `services` | Name, description, and price in R$ |
 | `hours` | Opening hours. A day with `closed: true` is marked Fechado |
 | `address`, `mapQuery` | Address text, the embedded map, and the directions link |
-| `whatsapp` | Area code + number, digits only, **without** the `55`. Every WhatsApp link is built from this value |
+| `whatsapp` | Area code + number, digits only, **without** the `55`. The `wa.me` links in `index.html` use this number |
 | `instagram` | Handle, without `@` |
 | `hero`, `logo` | Hero photo paths and the logo file |
 | `PACKAGES_URL` | Destination of the footer link "Ver os 3 pacotes" |

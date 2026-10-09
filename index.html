@@ -31,7 +31,66 @@
     <meta name="twitter:image" content="https://barbearia-leme-pagina.vercel.app/og.jpg" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <!-- Preload matches shop.hero in config.js. Written here so the hero request starts before JavaScript. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": ["HairSalon", "LocalBusiness"],
+        "name": "Barbearia Leme",
+        "telephone": "+55 71 99413-0031",
+        "url": "https://barbearia-leme-pagina.vercel.app",
+        "image": "https://barbearia-leme-pagina.vercel.app/og.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Santos Dumont, 450 — Centro",
+          "addressLocality": "Lauro de Freitas",
+          "addressRegion": "BA",
+          "addressCountry": "BR"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "https://schema.org/Monday",
+            "description": "Fechado"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "https://schema.org/Tuesday",
+            "opens": "09:00",
+            "closes": "19:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "https://schema.org/Wednesday",
+            "opens": "09:00",
+            "closes": "19:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "https://schema.org/Thursday",
+            "opens": "09:00",
+            "closes": "19:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "https://schema.org/Friday",
+            "opens": "09:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "https://schema.org/Saturday",
+            "opens": "08:00",
+            "closes": "18:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "https://schema.org/Sunday",
+            "description": "Fechado"
+          }
+        ]
+      }
+    </script>
+    <!-- Preload matches shop.hero in config.js. The hero image is in this file, not injected by script. -->
     <link
       rel="preload"
       as="image"
@@ -76,14 +135,231 @@
           />
         </picture>
         <div class="hero-shade" aria-hidden="true"></div>
-        <div class="hero-copy" id="hero-copy"></div>
+        <div class="hero-copy" id="hero-copy">
+          <img class="logo" src="favicon.svg" width="56" height="56" alt="" />
+          <h1 class="brand" aria-label="Barbearia Leme">
+            <span class="brand-lead">Barbearia</span>
+            <span class="brand-name">Leme</span>
+          </h1>
+          <p class="tagline">Estilo e tradição em cada corte</p>
+          <a
+            class="btn btn-gold hero-cta"
+            href="https://wa.me/5571994130031?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Barbearia%20Leme%20e%20quero%20marcar%20um%20hor%C3%A1rio."
+            target="_blank"
+            rel="noopener noreferrer"
+            >Agendar pelo WhatsApp</a
+          >
+        </div>
       </section>
-      <section class="section" id="servicos" aria-labelledby="servicos-title"></section>
-      <section class="section section-panel" id="horario" aria-labelledby="horario-title"></section>
-      <section class="section" id="endereco" aria-labelledby="endereco-title"></section>
+
+      <section class="section" id="servicos" aria-labelledby="servicos-title">
+        <div class="section-inner">
+          <h2 id="servicos-title">Serviços</h2>
+          <ul class="services">
+            <li class="service">
+              <div class="service-top">
+                <div>
+                  <p class="service-index">01</p>
+                  <h3>Corte</h3>
+                  <p class="service-desc">Tesoura e máquina, com acabamento na navalha e alinhamento.</p>
+                </div>
+                <p class="price">R$ 45</p>
+              </div>
+              <a
+                class="btn btn-line"
+                href="https://wa.me/5571994130031?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Barbearia%20Leme%20e%20quero%20agendar%3A%20Corte."
+                target="_blank"
+                rel="noopener noreferrer"
+                >Agendar</a
+              >
+            </li>
+            <li class="service">
+              <div class="service-top">
+                <div>
+                  <p class="service-index">02</p>
+                  <h3>Barba</h3>
+                  <p class="service-desc">Desenho, toalha quente e hidratação para fechar o visual.</p>
+                </div>
+                <p class="price">R$ 35</p>
+              </div>
+              <a
+                class="btn btn-line"
+                href="https://wa.me/5571994130031?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Barbearia%20Leme%20e%20quero%20agendar%3A%20Barba."
+                target="_blank"
+                rel="noopener noreferrer"
+                >Agendar</a
+              >
+            </li>
+            <li class="service">
+              <div class="service-top">
+                <div>
+                  <p class="service-index">03</p>
+                  <h3>Corte + Barba</h3>
+                  <p class="service-desc">O ritual completo: cabelo, barba e finalização.</p>
+                </div>
+                <p class="price">R$ 75</p>
+              </div>
+              <a
+                class="btn btn-line"
+                href="https://wa.me/5571994130031?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Barbearia%20Leme%20e%20quero%20agendar%3A%20Corte%20%2B%20Barba."
+                target="_blank"
+                rel="noopener noreferrer"
+                >Agendar</a
+              >
+            </li>
+            <li class="service">
+              <div class="service-top">
+                <div>
+                  <p class="service-index">04</p>
+                  <h3>Pigmentação</h3>
+                  <p class="service-desc">Disfarce de falhas e fios brancos, com efeito natural.</p>
+                </div>
+                <p class="price">R$ 40</p>
+              </div>
+              <a
+                class="btn btn-line"
+                href="https://wa.me/5571994130031?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Barbearia%20Leme%20e%20quero%20agendar%3A%20Pigmenta%C3%A7%C3%A3o."
+                target="_blank"
+                rel="noopener noreferrer"
+                >Agendar</a
+              >
+            </li>
+            <li class="service">
+              <div class="service-top">
+                <div>
+                  <p class="service-index">05</p>
+                  <h3>Sobrancelha</h3>
+                  <p class="service-desc">Design masculino, limpo e proporcional ao rosto.</p>
+                </div>
+                <p class="price">R$ 20</p>
+              </div>
+              <a
+                class="btn btn-line"
+                href="https://wa.me/5571994130031?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Barbearia%20Leme%20e%20quero%20agendar%3A%20Sobrancelha."
+                target="_blank"
+                rel="noopener noreferrer"
+                >Agendar</a
+              >
+            </li>
+            <li class="service">
+              <div class="service-top">
+                <div>
+                  <p class="service-index">06</p>
+                  <h3>Corte Infantil</h3>
+                  <p class="service-desc">Corte com calma para crianças de até 12 anos.</p>
+                </div>
+                <p class="price">R$ 35</p>
+              </div>
+              <a
+                class="btn btn-line"
+                href="https://wa.me/5571994130031?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Barbearia%20Leme%20e%20quero%20agendar%3A%20Corte%20Infantil."
+                target="_blank"
+                rel="noopener noreferrer"
+                >Agendar</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section-panel" id="horario" aria-labelledby="horario-title">
+        <div class="section-inner">
+          <h2 id="horario-title">Horário de funcionamento</h2>
+          <ul class="hours">
+            <li class="is-closed">
+              <span class="day">Segunda-feira</span>
+              <span class="when">Fechado</span>
+            </li>
+            <li>
+              <span class="day">Terça-feira</span>
+              <span class="when">09:00 – 19:00</span>
+            </li>
+            <li>
+              <span class="day">Quarta-feira</span>
+              <span class="when">09:00 – 19:00</span>
+            </li>
+            <li>
+              <span class="day">Quinta-feira</span>
+              <span class="when">09:00 – 19:00</span>
+            </li>
+            <li>
+              <span class="day">Sexta-feira</span>
+              <span class="when">09:00 – 20:00</span>
+            </li>
+            <li>
+              <span class="day">Sábado</span>
+              <span class="when">08:00 – 18:00</span>
+            </li>
+            <li class="is-closed">
+              <span class="day">Domingo</span>
+              <span class="when">Fechado</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="endereco" aria-labelledby="endereco-title">
+        <div class="section-inner">
+          <h2 id="endereco-title">Endereço</h2>
+          <div class="place">
+            <div>
+              <p class="address">Av. Santos Dumont, 450 — Centro, Lauro de Freitas — BA</p>
+              <a
+                class="btn btn-line directions"
+                href="https://www.google.com/maps/dir/?api=1&destination=Av.%20Santos%20Dumont%2C%20450%2C%20Centro%2C%20Lauro%20de%20Freitas%2C%20Bahia%2C%20Brasil"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Como chegar</a
+              >
+            </div>
+            <div class="map-wrap">
+              <iframe
+                title="Mapa — Barbearia Leme"
+                src="https://maps.google.com/maps?q=Av.%20Santos%20Dumont%2C%20450%2C%20Centro%2C%20Lauro%20de%20Freitas%2C%20Bahia%2C%20Brasil&z=16&hl=pt-BR&output=embed"
+                width="600"
+                height="450"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer class="footer" id="footer"></footer>
-    <a class="wa-float" id="wa-float" aria-label="Agendar pelo WhatsApp"></a>
+    <footer class="footer" id="footer">
+      <div class="footer-inner">
+        <p class="footer-name">Barbearia Leme</p>
+        <p class="footer-address">Av. Santos Dumont, 450 — Centro, Lauro de Freitas — BA</p>
+        <a class="ig" href="https://instagram.com/barbearialeme" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 1.8H7A2.2 2.2 0 0 0 4.8 7v10A2.2 2.2 0 0 0 7 19.2h10a2.2 2.2 0 0 0 2.2-2.2V7A2.2 2.2 0 0 0 17 4.8zM12 8.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2zm0 1.6A2.2 2.2 0 1 0 14.2 12 2.2 2.2 0 0 0 12 9.8zM17.35 6.4a.9.9 0 1 1-.9.9.9.9 0 0 1 .9-.9z"
+            />
+          </svg>
+          <span>@barbearialeme</span>
+        </a>
+        <div>
+          <a class="packages" href="https://barbearia-leme.vercel.app">Ver os 3 pacotes</a>
+        </div>
+        <p class="demo-note">Site de demonstração. Barbearia Leme é um negócio fictício.</p>
+      </div>
+    </footer>
+    <a
+      class="wa-float"
+      id="wa-float"
+      aria-label="Agendar pelo WhatsApp"
+      href="https://wa.me/5571994130031?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Barbearia%20Leme%20e%20quero%20marcar%20um%20hor%C3%A1rio."
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          fill="currentColor"
+          d="M20.5 3.5A11 11 0 0 0 2.1 16.8L1 23l6.4-1.1A11 11 0 0 0 12 22a11 11 0 0 0 8.5-18.5zM12 20.2a9.1 9.1 0 0 1-4.6-1.3l-.3-.2-3.8.7.7-3.7-.2-.3A9.2 9.2 0 1 1 12 20.2zm5-6.8c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a7.5 7.5 0 0 1-2.2-1.4 8.3 8.3 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5.2-.3a.5.5 0 0 0 0-.5c-.1-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.5 4 4 4 0 0 0 2.6.5 2.5 2.5 0 0 0 1.7-1.1 2 2 0 0 0 .1-1.2c-.1-.2-.3-.2-.6-.4z"
+        />
+      </svg>
+    </a>
     <script type="module" src="main.js"></script>
   </body>
 </html>
