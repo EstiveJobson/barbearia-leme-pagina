@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Barbearia Leme — Estilo e tradição em cada corte</title>
+    <meta
+      name="description"
+      content="Barbearia Leme, no Centro de Lauro de Freitas. Corte, barba e pigmentação com horário marcado pelo WhatsApp. Terça a sábado."
+    />
+    <link rel="canonical" href="https://barbearia-leme-pagina.vercel.app/" />
+    <meta name="theme-color" content="#090909" />
+    <meta property="og:title" content="Barbearia Leme — Estilo e tradição em cada corte" />
+    <meta
+      property="og:description"
+      content="Barbearia Leme, no Centro de Lauro de Freitas. Corte, barba e pigmentação com horário marcado pelo WhatsApp. Terça a sábado."
+    />
+    <meta property="og:image" content="https://barbearia-leme-pagina.vercel.app/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content="https://barbearia-leme-pagina.vercel.app/" />
+    <meta property="og:site_name" content="Barbearia Leme" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Barbearia Leme — Estilo e tradição em cada corte" />
+    <meta
+      name="twitter:description"
+      content="Barbearia Leme, no Centro de Lauro de Freitas. Corte, barba e pigmentação com horário marcado pelo WhatsApp. Terça a sábado."
+    />
+    <meta name="twitter:image" content="https://barbearia-leme-pagina.vercel.app/og.jpg" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <!-- Preload matches shop.hero in config.js. Written here so the hero request starts before JavaScript. -->
+    <link
+      rel="preload"
+      as="image"
+      type="image/avif"
+      href="images/hero-1280.avif"
+      imagesrcset="images/hero-640.avif 640w, images/hero-960.avif 960w, images/hero-1280.avif 1280w, images/hero-1920.avif 1920w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href="fonts/barlow-condensed-600-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="page">
+      <section class="hero" id="hero">
+        <picture id="hero-picture">
+          <source
+            type="image/avif"
+            sizes="100vw"
+            srcset="images/hero-640.avif 640w, images/hero-960.avif 960w, images/hero-1280.avif 1280w, images/hero-1920.avif 1920w"
+          />
+          <source
+            type="image/webp"
+            sizes="100vw"
+            srcset="images/hero-640.webp 640w, images/hero-960.webp 960w, images/hero-1280.webp 1280w, images/hero-1920.webp 1920w"
+          />
+          <img
+            id="hero-img"
+            src="images/hero-1280.webp"
+            srcset="images/hero-640.webp 640w, images/hero-960.webp 960w, images/hero-1280.webp 1280w, images/hero-1920.webp 1920w"
+            sizes="100vw"
+            width="1920"
+            height="1280"
+            alt="Barbeiro em atendimento na cadeira"
+            fetchpriority="high"
+          />
+        </picture>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-copy" id="hero-copy"></div>
+      </section>
+      <section class="section" id="servicos" aria-labelledby="servicos-title"></section>
+      <section class="section section-panel" id="horario" aria-labelledby="horario-title"></section>
+      <section class="section" id="endereco" aria-labelledby="endereco-title"></section>
+    </main>
+    <footer class="footer" id="footer"></footer>
+    <a class="wa-float" id="wa-float" aria-label="Agendar pelo WhatsApp"></a>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
