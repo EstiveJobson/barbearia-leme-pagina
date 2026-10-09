@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://barbearia-leme-pagina.vercel.app/sitemap.xml

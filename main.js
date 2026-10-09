@@ -77,8 +77,9 @@ function renderHeroCopy() {
   const parts = shop.name.trim().split(/\s+/);
   const last = parts.pop() ?? shop.name;
   const lead = parts.join(" ");
-  const title = el("h1", { class: "brand" });
+  const title = el("h1", { class: "brand", "aria-label": shop.name });
   if (lead) title.append(el("span", { class: "brand-lead", text: lead }));
+  title.append(document.createTextNode(" "));
   title.append(el("span", { class: "brand-name", text: last }));
 
   const copy = document.querySelector("#hero-copy");
@@ -205,6 +206,10 @@ function renderFooter() {
           text: "Ver os 3 pacotes",
         }),
       ]),
+      el("p", {
+        class: "demo-note",
+        text: "Site de demonstração. Barbearia Leme é um negócio fictício.",
+      }),
     ]),
   );
 }
@@ -217,10 +222,13 @@ function renderFloat() {
   link.replaceChildren(icon(WHATSAPP_PATH));
 }
 
-applyHero();
-renderHeroCopy();
-renderServices();
-renderHours();
-renderAddress();
-renderFooter();
-renderFloat();
+// Static HTML in index.html is the page. Render from config only when that markup is missing.
+if (!document.getElementById("servicos-title")) {
+  applyHero();
+  renderHeroCopy();
+  renderServices();
+  renderHours();
+  renderAddress();
+  renderFooter();
+  renderFloat();
+}

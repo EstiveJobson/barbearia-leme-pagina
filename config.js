@@ -1,7 +1,7 @@
 /**
  * Shop data for the Barbearia Leme single-page demo.
- * Edit this file to change the name, copy, prices, hours, address, and links.
- * The page reads these values at runtime. Comments stay in English.
+ * The served page is the static markup in index.html. Keep these values in sync with it.
+ * Comments stay in English.
  */
 
 /**
@@ -79,13 +79,14 @@ export const shop = {
       price: 35,
     },
   ],
+  /** Monday through Sunday, matching the list in index.html. */
   hours: [
-    { day: 0, label: "Domingo", closed: true },
-    { day: 1, label: "Segunda", closed: true },
-    { day: 2, label: "Terça", closed: false, open: "09:00", close: "19:00" },
-    { day: 3, label: "Quarta", closed: false, open: "09:00", close: "19:00" },
-    { day: 4, label: "Quinta", closed: false, open: "09:00", close: "19:00" },
-    { day: 5, label: "Sexta", closed: false, open: "09:00", close: "20:00" },
+    { day: 1, label: "Segunda-feira", closed: true },
+    { day: 2, label: "Terça-feira", closed: false, open: "09:00", close: "19:00" },
+    { day: 3, label: "Quarta-feira", closed: false, open: "09:00", close: "19:00" },
+    { day: 4, label: "Quinta-feira", closed: false, open: "09:00", close: "19:00" },
+    { day: 5, label: "Sexta-feira", closed: false, open: "09:00", close: "20:00" },
     { day: 6, label: "Sábado", closed: false, open: "08:00", close: "18:00" },
+    { day: 0, label: "Domingo", closed: true },
   ],
 };
