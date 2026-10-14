@@ -37,3 +37,8 @@ The hero photograph is the same image used by the full site (Unsplash `photo-150
 ## Local preview
 
 Serve the folder with any static file server and open `index.html`. Paths are relative to the site root.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
